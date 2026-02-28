@@ -17,10 +17,13 @@ Distributed_Systems_code
 │   ├── Python Version (TCP/UDP)
 │   └── C Version (Sockets)
 │
-└── 📁 Workshop_2_Communication
-    ├── RMI (Remote Method Invocation)
-    ├── Publisher-Subscriber (ZeroMQ)
-    └── Pipeline/Push-Pull (ZeroMQ Broker)
+├── 📁 Workshop_2_Communication
+│   ├── RMI (Remote Method Invocation)
+│   ├── Publisher-Subscriber (ZeroMQ)
+│   └── Pipeline/Push-Pull (ZeroMQ Broker)
+│
+└── 📁 Workshop_3_DNS_LDAP
+    └── DNS_lookup
 ```
 
 ## Workshops Overview
@@ -37,10 +40,15 @@ Distributed_Systems_code
 *   **Pub-Sub:** Building decoupled systems where publishers don't know subscribers.
 *   **Pipeline:** Distributing heavy workloads across multiple workers using a **Broker** architecture.
 
+### 3️⃣ Workshop 3: DNS and LDAP Implementation
+**Focus:** Name Resolution and Directory Services.
+*   **DNS Lookups:** Querying various DNS records (A, PTR, MX, NS, SOA, CNAME) using Python's `dnspython`.
+*   **Custom Resolvers & Errors:** Configuring custom DNS resolvers and handling exceptions like `NXDOMAIN`.
+
 ## 🚀 Technologies & Libraries
 
 *   **Core:** Python 3.11+, GCC Compiler.
-*   **Networking:** `socket` (BSD Sockets), `xmlrpc.server`.
+*   **Networking:** `socket` (BSD Sockets), `xmlrpc.server`, `dnspython`.
 *   **Middleware:** [ZeroMQ (pyzmq)](https://zeromq.org/) for high-performance asynchronous messaging.
 
 ## 📦 How to Run

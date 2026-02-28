@@ -1,0 +1,7 @@
+dn: ou=People,dc=ShonyALV,dc=com
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=Groups,dc=ShonyALV,dc=com
+objectClass: organizationalUnit
+ou: Groups
