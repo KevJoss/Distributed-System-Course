@@ -68,6 +68,8 @@ python dns_debug_and_exceptions.py
 ---
 
 ## 👤 Author
-**Student:** Kevin Sánchez
+**Students:** Kevin Sánchez & Jhony Penaherrera
+
 **Course:** Distributed Systems
+
 **University:** Yachay Tech
