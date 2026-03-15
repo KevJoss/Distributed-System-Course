@@ -22,8 +22,12 @@ Distributed_Systems_code
 │   ├── Publisher-Subscriber (ZeroMQ)
 │   └── Pipeline/Push-Pull (ZeroMQ Broker)
 │
-└── 📁 Workshop_3_DNS_LDAP
-    └── DNS_lookup
+├── 📁 Workshop_3_DNS_LDAP
+│   └── DNS_lookup
+│
+└── 📁 Workshop_4_Coordination
+    ├── Centralized UTC Server
+    └── Decentralized Peer-to-Peer Time Sync
 ```
 
 ## Workshops Overview
@@ -45,6 +49,12 @@ Distributed_Systems_code
 *   **DNS Lookups:** Querying various DNS records (A, PTR, MX, NS, SOA, CNAME) using Python's `dnspython`.
 *   **Custom Resolvers & Errors:** Configuring custom DNS resolvers and handling exceptions like `NXDOMAIN`.
 
+### 4️⃣ Workshop 4: Coordination and Time Synchronization
+**Focus:** Clock Synchronization in Distributed Environments.
+*   **Centralized UTC Server:** Traditional Client-Server time exchange.
+*   **Decentralized P2P Sync:** Implementing coordination using system clocks, ZMQ, and threading without a central server.
+*   **Advanced Features:** Network latency compensation (Cristian's logic) and robust outlier filtering.
+
 ## 🚀 Technologies & Libraries
 
 *   **Core:** Python 3.11+, GCC Compiler.
@@ -59,7 +69,7 @@ Distributed_Systems_code
     cd distributed-systems-repo
     ```
 
-2.  **Install dependencies (for Workshop 2):**
+2.  **Install dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
