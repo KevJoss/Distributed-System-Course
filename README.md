@@ -23,58 +23,37 @@ Distributed_Systems_code
 │   └── Pipeline/Push-Pull (ZeroMQ Broker)
 │
 ├── 📁 Workshop_3_DNS_LDAP
-│   └── DNS_lookup
+│   ├── DNS_lookup (Record types & Exceptions)
+│   └── LDAP (Directory & Authentication)
 │
 └── 📁 Workshop_4_Coordination
     ├── Centralized UTC Server
-    └── Decentralized Peer-to-Peer Time Sync
+    ├── Decentralized P2P Time Sync (peer.py)
+    ├── Vector Clocks (Causality tracking)
+    └── Mutual Exclusion (Centralized & Token Ring)
 ```
 
 ## Workshops Overview
 
 ### 1️⃣ Workshop 1: Client-Server Fundamentals
-**Focus:** Low-level Socket Programming.
-*   Understanding the TCP 3-way handshake.
-*   Implementing persistent connections in **C** and **Python**.
-*   Handling byte-stream buffering and encoding.
+**Focus:** Low-level programming with Sockets in C (Winsock) and Python.
 
 ### 2️⃣ Workshop 2: Advanced Patterns
-**Focus:** Scalable Architectures with Middleware.
-*   **RMI:** Abstracting network calls as local function calls using `xmlrpc`.
-*   **Pub-Sub:** Building decoupled systems where publishers don't know subscribers.
-*   **Pipeline:** Distributing heavy workloads across multiple workers using a **Broker** architecture.
+**Focus:** Scalable Architectures with Middleware (ZeroMQ). Includes RMI, Pub-Sub, and Pipeline patterns.
 
 ### 3️⃣ Workshop 3: DNS and LDAP Implementation
-**Focus:** Name Resolution and Directory Services.
-*   **DNS Lookups:** Querying various DNS records (A, PTR, MX, NS, SOA, CNAME) using Python's `dnspython`.
-*   **Custom Resolvers & Errors:** Configuring custom DNS resolvers and handling exceptions like `NXDOMAIN`.
+**Focus:** Name Resolution and Directory Services. Programmatic DNS queries and LDAP authentication logic.
 
-### 4️⃣ Workshop 4: Coordination and Time Synchronization
-**Focus:** Clock Synchronization in Distributed Environments.
-*   **Centralized UTC Server:** Traditional Client-Server time exchange.
-*   **Decentralized P2P Sync:** Implementing coordination using system clocks, ZMQ, and threading without a central server.
-*   **Advanced Features:** Network latency compensation (Cristian's logic) and robust outlier filtering.
+### 4️⃣ Workshop 4: Coordination, Logical Time & Mutual Exclusion
+**Focus:** Handling Time and Shared Resources.
+*   **Clock Sync:** Centralized (UTC) and Decentralized (Berkeley-like) synchronization.
+*   **Logical Time:** Vector Clocks for causality tracking.
+*   **Mutual Exclusion:** Managing shared resource access via Centralized Coordinators and Decentralized Token Rings.
 
 ## 🚀 Technologies & Libraries
-
 *   **Core:** Python 3.11+, GCC Compiler.
-*   **Networking:** `socket` (BSD Sockets), `xmlrpc.server`, `dnspython`.
-*   **Middleware:** [ZeroMQ (pyzmq)](https://zeromq.org/) for high-performance asynchronous messaging.
-
-## 📦 How to Run
-
-1.  **Clone the repo:**
-    ```bash
-    git clone https://github.com/your-username/distributed-systems-repo.git
-    cd distributed-systems-repo
-    ```
-
-2.  **Install dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-3.  **Navigate to a specific workshop** and follow its internal `README.md`.
+*   **Middleware:** [ZeroMQ (pyzmq)](https://zeromq.org/) for high-performance messaging.
+*   **Libraries:** `dnspython`, `xmlrpc`, `threading`.
 
 ---
 *Created with ❤️ by a KevJoss.*
