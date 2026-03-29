@@ -26,11 +26,15 @@ Distributed_Systems_code
 │   ├── DNS_lookup (Record types & Exceptions)
 │   └── LDAP (Directory & Authentication)
 │
-└── 📁 Workshop_4_Coordination
-    ├── Centralized UTC Server
-    ├── Decentralized P2P Time Sync (peer.py)
-    ├── Vector Clocks (Causality tracking)
-    └── Mutual Exclusion (Centralized & Token Ring)
+├── 📁 Workshop_4_Coordination
+│   ├── Centralized UTC Server
+│   ├── Decentralized P2P Time Sync (peer.py)
+│   ├── Vector Clocks (Causality tracking)
+│   └── Mutual Exclusion (Centralized & Token Ring)
+│
+└── 📁 Workshop_5_Distributed_DataBases
+    ├── Part 1: Primary-Replica Replication & Sharding
+    └── Part 2: Concurrency Control (Lost Updates, Lag, Deadlocks)
 ```
 
 ## Workshops Overview
@@ -50,10 +54,16 @@ Distributed_Systems_code
 *   **Logical Time:** Vector Clocks for causality tracking.
 *   **Mutual Exclusion:** Managing shared resource access via Centralized Coordinators and Decentralized Token Rings.
 
+### 5️⃣ Workshop 5: Distributed Databases (Scalability & Consistency)
+**Focus:** Data Partitioning and Concurrency in a Distributed Environment.
+*   **Replication & Sharding:** Implementing Primary-Replica redundancy and Horizontal/Vertical sharding.
+*   **Concurrency Control:** Analyzing and solving anomalies like Lost Updates, Replica Lag, and Deadlocks using GTID and MySQL Row-level locking.
+
 ## 🚀 Technologies & Libraries
 *   **Core:** Python 3.11+, GCC Compiler.
+*   **Databases:** MySQL 8.0+, Docker & Docker Compose.
 *   **Middleware:** [ZeroMQ (pyzmq)](https://zeromq.org/) for high-performance messaging.
 *   **Libraries:** `dnspython`, `xmlrpc`, `threading`.
 
 ---
-*Created with ❤️ by a KevJoss.*
+*Created with ❤️ by KevJoss.*
