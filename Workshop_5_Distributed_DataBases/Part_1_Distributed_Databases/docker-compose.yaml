@@ -1,0 +1,33 @@
+services:
+  mysql-primary:
+    image: mysql:8.0
+    container_name: mysql-primary
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+    command: --server-id=1 --log-bin=mysql-bin
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-primary:/var/lib/mysql
+    networks:
+      - localhost
+
+  mysql-replica:
+    image: mysql:8.0
+    container_name: mysql-replica
+    environment:
+      - MYSQL_ROOT_PASSWORD=123456
+    command: --server-id=2
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-replica:/var/lib/mysql
+    networks:
+      - localhost
+networks:
+  localhost:
+    driver: bridge
+
+volumes:
+  mysql-primary:
+  mysql-replica:
