@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="CropTypeEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Tomato" />
+            <xs:enumeration value="Potato" />
+            <xs:enumeration value="Background" />
+            <xs:enumeration value="Pending" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="StatusEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Queued" />
+            <xs:enumeration value="Routing" />
+            <xs:enumeration value="Completed" />
+            <xs:enumeration value="Invalid" />
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="DiagnosticTask">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="TaskID" type="xs:positiveInteger" />
+                <xs:element name="Payload">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ImageID" type="xs:positiveInteger" />
+                            <xs:element name="ImagePath" type="xs:string" />
+                            <xs:element name="DetectedCrop" type="CropTypeEnum" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="State">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="CurrentStatus" type="StatusEnum" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
