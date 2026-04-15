@@ -1,1 +1,3 @@
 LDAP_kev/
+.venv
+__pycache__
